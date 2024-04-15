@@ -4,7 +4,9 @@ This Docker Compose file sets up a complete Zabbix monitoring stack, including a
 
 Services :
 
-1-MySQL: A MySQL 5.7 database for storing Zabbix data.
+1-MySQL: 
+
+A MySQL 5.7 database for storing Zabbix data.
 2-Zabbix Server: The Zabbix server component, connected to the MySQL database.
 3-Zabbix Frontend: The Zabbix web interface, also connected to the MySQL database.
 4-Grafana: A data visualization tool, integrated with the Zabbix server.
