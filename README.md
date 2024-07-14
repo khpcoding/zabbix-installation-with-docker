@@ -19,7 +19,7 @@ This repository contains a Docker Compose setup for deploying Zabbix version 6 w
 1. Clone this repository:
 
 ```sh
-git clone https://github.com/yourusername/zabbix-docker.git
+git clone https://github.com/khpcoding/zabbix-installation-with-docker.git
 cd zabbix-docker
 ```
 
