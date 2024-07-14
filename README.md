@@ -29,4 +29,12 @@ for running this compose file you need to run this command in your shell :
 
 docker compose up -d 
 
+###Repository Structure
+zabbix-docker
+├── README.md
+├── docker-compose.yml
+└── .gitignore
+
+
+
 
