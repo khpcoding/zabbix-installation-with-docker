@@ -1,40 +1,36 @@
-# zabbix-installation-with-docker
+# Zabbix Docker Deployment
 
-This Docker Compose file sets up a complete Zabbix monitoring stack, including a MySQL database, Zabbix server, Zabbix frontend, Grafana, and a Zabbix agent.
+This repository contains a Docker Compose setup for deploying Zabbix version 6 with a MySQL database backend. The setup includes the Zabbix server, Zabbix web frontend, Zabbix agent, and a MySQL database.
 
-Services :
+## Services
 
-1-MySQL: A MySQL 5.7 database for storing Zabbix data.
-2-Zabbix Server: The Zabbix server component, connected to the MySQL database.
-3-Zabbix Frontend: The Zabbix web interface, also connected to the MySQL database.
-4-Grafana: A data visualization tool, integrated with the Zabbix server.
-5-Zabbix Agent: A Zabbix agent container for monitoring the host system.
+- **db**: MySQL database for Zabbix.
+- **zabbix-server**: Zabbix server.
+- **zabbix-web**: Zabbix web frontend using Nginx.
+- **zabbix-agent**: Zabbix agent.
 
-Usage : 
+## Prerequisites
 
-1-Clone the repository or copy the docker-compose.yml file to your desired location.
-2-Run docker-compose up -d to start the containers.
-3-Access the Zabbix frontend at http://localhost and the Grafana dashboard at http://localhost:3000.
+- Docker installed on your local machine.
+- Docker Compose installed on your local machine.
 
-Configuration :
+## Getting Started
 
-1-The MySQL database credentials are set in the environment variables of the mysql service.
-2-The Zabbix server and frontend are configured to use the MySQL database with the same credentials.
-3-The Grafana container is set to install the Zabbix plugin.
-4-The Zabbix agent is configured to connect to the Zabbix server at the IP address 127.0.0.1 (IP Public of your server).
+1. Clone this repository:
 
-How to running :
+```sh
+git clone https://github.com/yourusername/zabbix-docker.git
+cd zabbix-docker
+```
 
-for running this compose file you need to run this command in your shell :
+## RUN Project 
+```
+docker-compose up -d
+```
 
-docker compose up -d 
+## Default Login Credentials
+Username: Admin
+Password: zabbix
 
-###Repository Structure
-zabbix-docker
-├── README.md
-├── docker-compose.yml
-└── .gitignore
-
-
-
-
+## Configuration
+Time Zone: Adjust the PHP_TZ environment variable in the zabbix-web service in the docker-compose.yml file to your preferred time zone.
